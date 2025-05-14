@@ -1,7 +1,9 @@
 `timescale 1ns / 1ps
 
-module main(
-    input clk_in,
+module main#(
+    parameter MOD_DELITEL = 16384
+)(
+    input clk,
     output clk_out,
     input PS2_clk,
     input PS2_dat,
@@ -16,7 +18,7 @@ reg [7:0] an_mask = 8'b11111111;
 reg [31:0] shift_register = 0;
 
 PS2_Manager m_m(
-    .clk(clk_in),
+    .clk(clk),
     .PS2_dat(PS2_dat),
     .PS2_clk(PS2_clk),
     .R_O(R_O),
@@ -25,7 +27,7 @@ PS2_Manager m_m(
 );
 
 delitel #(
-    .mod(16384)
+    .mod(MOD_DELITEL)
 ) clk_div1 (
     .clk(clk),
     .out(clk_div_out)
@@ -48,5 +50,14 @@ begin
 end
 
 assign clk_out = PS2_clk;
+
+vio_0 vio(
+    .clk(clk),
+    .probe_in0(PS2_clk),
+    .probe_in1(PS2_dat),
+    .probe_in2(out),
+    .probe_in3(flags),
+    .probe_in4(R_O)
+);
 
 endmodule
