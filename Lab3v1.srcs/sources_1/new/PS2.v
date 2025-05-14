@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module PS2(
     input clk,
     input PS2_clk,
@@ -39,12 +41,12 @@ begin
 end
 
 
-// Р‘Р»РѕРє СѓРїСЂР°РІР»РµРЅРёСЏ Р±СѓС„РµСЂРѕРј РґР»СЏ Р·Р°РїРёСЃРё РїР°РєРµС‚Р°    
+// Блок управления буфером для записи пакета    
 always@(negedge PS2_clk_sync[1])
 begin
     case(state)
         
-        // РћР¶РёРґР°РЅРёРµ СЃС‚Р°СЂС‚РѕРІРѕРіРѕ Р±РёС‚Р°
+        // Ожидание стартового бита
         WAIT_START_BIT:
         begin
             R_O <= 0; 
@@ -52,7 +54,7 @@ begin
             state <= ~PS2_dat_sync[1] ? WRITE : IDLE;
         end
         
-        // РћР¶РёРґР°РЅРёРµ РєРѕРЅС†Р° РїР°РєРµС‚Р°
+        // Ожидание конца пакета
         IDLE:
             if (cnt == 4'd10)
             begin
@@ -61,14 +63,14 @@ begin
                 state <= WAIT_START_BIT;         
             end
 
-        // РћР±СЂР°Р±РѕС‚РєР° Р±РёС‚РѕРІ РґР°РЅРЅС‹С…
+        // Обработка битов данных
         WRITE: begin
             if (cnt == 4'd8)
                 state <= PARITY_BIT;
             PS2_buf <= {PS2_dat_sync[1], PS2_buf[7:1]};
         end
         
-        // РћР±СЂР°Р±РѕС‚РєР° Р±РёС‚Р° С‡С‘С‚РЅРѕСЃС‚Рё 
+        // Обработка бита чётности 
         PARITY_BIT: begin  
             if ((~^PS2_buf) == PS2_dat_sync[1])
                 state <= STOP_BIT;
@@ -76,7 +78,7 @@ begin
                 state <= IDLE; 
         end
         
-        // РћР±СЂР°Р±РѕС‚РєР° СЃС‚РѕРї-Р±РёС‚Р°  
+        // Обработка стоп-бита   
         STOP_BIT: begin
             if (!PS2_dat_sync[1])
                 ERROR <= 1;  
