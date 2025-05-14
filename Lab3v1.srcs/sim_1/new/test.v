@@ -15,7 +15,9 @@ reg [3:0] i;
 wire [7:0] AN;
 wire [6:0] SEG;
 
-wire [3:0] out = uut.out;
+wire [7:0] out = uut.out;
+wire [1:0] flags = uut.flags;
+wire R_O = uut.R_O;
 
 main uut (
     .clk_in(clk),

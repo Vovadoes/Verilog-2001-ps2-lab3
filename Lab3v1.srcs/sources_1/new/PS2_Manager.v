@@ -6,7 +6,7 @@ module PS2_Manager (
     input PS2_clk,
     
     output reg R_O,
-    output [3:0] out,
+    output [7:0] out,
     output [1:0] flags
 );
 // Состояние ожидания установки сигнала готовности пакета данных
