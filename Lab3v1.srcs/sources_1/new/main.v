@@ -4,7 +4,7 @@ module main#(
     parameter MOD_DELITEL = 16384
 )(
     input clk,
-    output clk_out,
+//    output clk_out,
     input PS2_clk,
     input PS2_dat,
     output [7:0] AN,
@@ -49,7 +49,7 @@ begin
     shift_register <= {2'b0, flags, 20'b0, out};
 end
 
-assign clk_out = PS2_clk;
+//assign clk_out = PS2_clk;
 
 vio_0 vio(
     .clk(clk),
