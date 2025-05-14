@@ -14,6 +14,9 @@ reg [7:0] key_code;
 reg [3:0] i;
 wire [7:0] AN;
 wire [6:0] SEG;
+
+wire [3:0] out = uut.out;
+
 main uut (
     .clk_in(clk),
     .clk_out(clk_out),
