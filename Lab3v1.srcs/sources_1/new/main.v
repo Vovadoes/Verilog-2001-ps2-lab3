@@ -1,15 +1,6 @@
 `timescale 1ns / 1ps
 
-module main#(
-    parameter MOD_DELITEL = 16384
-)(
-    input clk,
-//    output clk_out,
-    input PS2_clk,
-    input PS2_dat,
-    output [7:0] AN,
-    output [6:0] SEG
-    );
+
 
 wire R_O;
 wire [7:0] out;
