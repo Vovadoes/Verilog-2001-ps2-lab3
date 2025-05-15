@@ -2,12 +2,12 @@
 
 module PS2_DC(
     input [7:0] keycode,
-    output reg [7:0] out,
+    output reg [3:0] out,
     output reg [1:0] flags
 );
 
 reg [7:0] NUMBERS [0:15];
-parameter [7:0] ENTER_CODE = 8'h5A;                              
+parameter [7:0] ENTER_CODE = 8'h5A;                           
 parameter NUMBER_F = 0, ENTER_F = 1;
 
 initial begin 
