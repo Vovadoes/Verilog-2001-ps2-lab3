@@ -21,7 +21,6 @@ wire R_O = uut.R_O;
 
 main #(.MOD_DELITEL(8)) uut (
     .clk(clk),
-    .clk_out(clk_out),
     .PS2_clk(PS2_clk),
     .PS2_dat(PS2_dat),
     .AN(AN),

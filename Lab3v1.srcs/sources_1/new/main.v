@@ -33,7 +33,6 @@ reg CLOCK_ENABLE = 0;
 always @(posedge clk)
     CLOCK_ENABLE <= ~CLOCK_ENABLE;
 
-wire btn_c_out, btn_c_out_enable;
 reg [31:0] shift_register;
 reg [7:0] an_mask;
 
@@ -52,7 +51,7 @@ wire R_O;
 wire PS2_R_O;
 reg [6:0] cnt;
 reg [2:0] state;// new_state;
-wire [3:0] out;
+wire [7:0] out;
 wire [1:0] flags;
 reg [15:0] buffer_in = 0;
 
@@ -67,7 +66,7 @@ end
 always@(posedge PS2_R_O)
 begin
     if (flags == 2'b1)
-        buffer_in <= {buffer_in[11:0], out};
+        buffer_in <= {buffer_in[11:0], out[3:0]};
     else
         buffer_in <= buffer_in;
 end

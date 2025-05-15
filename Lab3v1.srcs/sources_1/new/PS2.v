@@ -4,7 +4,7 @@ module PS2(
     input clk,
     input PS2_clk,
     input PS2_dat,
-    output [3:0] out,
+    output [7:0] out,
     output reg R_O,
     output reg ERROR
 );

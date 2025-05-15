@@ -6,7 +6,7 @@ module PS2_Manager (
     input PS2_clk,
     
     output reg R_O,
-    output [3:0] out,
+    output [7:0] out,
     output [1:0] flags
 );
 // Состояние ожидания установки сигнала готовности пакета данных
@@ -16,7 +16,7 @@ parameter WAIT_ZERO = 1;
 reg state;
 // Выходы модуля приёма одного пакета PS2
 wire PS2_R_O, PS2_ERROR; 
-wire [7:0] PS2_out;
+wire [3:0] PS2_out;
 // Регистр флага отжатия клавиши
 reg release_flag;
 

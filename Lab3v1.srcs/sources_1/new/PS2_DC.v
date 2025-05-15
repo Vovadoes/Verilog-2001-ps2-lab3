@@ -2,7 +2,7 @@
 
 module PS2_DC(
     input [7:0] keycode,
-    output reg [3:0] out,
+    output reg [7:0] out,
     output reg [1:0] flags
 );
 
