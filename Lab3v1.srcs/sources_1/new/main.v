@@ -78,7 +78,7 @@ begin
         begin
             shift_register <= {4'ha, 12'b0, buffer_in};
             R_I <= 0;
-            if (flags == 2'd2) begin
+            if (flags == 2'd2 && PS2_R_O) begin
                 data_in <= buffer_in;
                 state <= 1;
                 an_mask <= 8'b01110000;
@@ -99,7 +99,7 @@ begin
         begin
             R_I <= 0;
             shift_register <= {4'hb, 12'b0, buffer_in};
-            if (flags == 2'd2) begin
+            if (flags == 2'd2 && PS2_R_O) begin
                 data_in <= buffer_in;
                 state <= 3;
                 an_mask <= 8'b01110000;
@@ -120,7 +120,7 @@ begin
         begin
             R_I <= 0;
             shift_register <= {4'hc, 12'b0, buffer_in};
-            if (flags == 2'd2) begin
+            if (flags == 2'd2 && PS2_R_O) begin
                 data_in <= buffer_in;
                 state <= 5;
                 an_mask <= 8'b11111111;
@@ -159,7 +159,7 @@ begin
         end
         
         7:
-        if (flags == 2'd2) begin
+        if (flags == 2'd2 && PS2_R_O) begin
             an_mask <= 8'b01110000;
             shift_register <= {4'ha, 12'b0, buffer_in};
             state <= 0;
