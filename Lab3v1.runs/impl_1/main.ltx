@@ -1,0 +1,1306 @@
+{
+    "ltx_root": {
+        "version": 4,
+        "minor": 0,
+        "ltx_data": [
+            {
+                "name": "EDA_PROBESET",
+                "active": true,
+                "debug_cores": [
+                    {
+                        "type": "XSDB_V3",
+                        "name": "dbg_hub",
+                        "spec": "labtools_xsdbm_v3",
+                        "clk_input_freq_hz": "100000000"
+                    },
+                    {
+                        "type": "VIO_V2",
+                        "name": "vio",
+                        "spec": "labtools_vio_v3",
+                        "ipName": "vio",
+                        "core_location": {
+                            "user_chain": 1,
+                            "slave_index": 0,
+                            "bscan_switch_index": 0
+                        },
+                        "uuid": "1BE27D511A4C50DC974F3E22D2C609B9",
+                        "pins": [
+                            {
+                                "name": "probe_in0",
+                                "id": 0,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 2,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "state",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "state[2]",
+                                                "parentNetId": 0
+                                            },
+                                            {
+                                                "name": "state[1]",
+                                                "parentNetId": 1
+                                            },
+                                            {
+                                                "name": "state[0]",
+                                                "parentNetId": 2
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in1",
+                                "id": 1,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 6,
+                                "portIndex": 1,
+                                "nets": [
+                                    {
+                                        "name": "a_state",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "a_state[6]"
+                                            },
+                                            {
+                                                "name": "a_state[5]",
+                                                "parentNetId": 4
+                                            },
+                                            {
+                                                "name": "a_state[4]"
+                                            },
+                                            {
+                                                "name": "a_state[3]"
+                                            },
+                                            {
+                                                "name": "a_state[2]",
+                                                "parentNetId": 7
+                                            },
+                                            {
+                                                "name": "a_state[1]",
+                                                "parentNetId": 8
+                                            },
+                                            {
+                                                "name": "a_state[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in2",
+                                "id": 2,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 2,
+                                "nets": [
+                                    {
+                                        "name": "R_O",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in3",
+                                "id": 3,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 15,
+                                "portIndex": 3,
+                                "nets": [
+                                    {
+                                        "name": "buffer_in",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "buffer_in[15]"
+                                            },
+                                            {
+                                                "name": "buffer_in[14]"
+                                            },
+                                            {
+                                                "name": "buffer_in[13]"
+                                            },
+                                            {
+                                                "name": "buffer_in[12]"
+                                            },
+                                            {
+                                                "name": "buffer_in[11]"
+                                            },
+                                            {
+                                                "name": "buffer_in[10]"
+                                            },
+                                            {
+                                                "name": "buffer_in[9]"
+                                            },
+                                            {
+                                                "name": "buffer_in[8]"
+                                            },
+                                            {
+                                                "name": "buffer_in[7]"
+                                            },
+                                            {
+                                                "name": "buffer_in[6]"
+                                            },
+                                            {
+                                                "name": "buffer_in[5]"
+                                            },
+                                            {
+                                                "name": "buffer_in[4]"
+                                            },
+                                            {
+                                                "name": "buffer_in[3]"
+                                            },
+                                            {
+                                                "name": "buffer_in[2]"
+                                            },
+                                            {
+                                                "name": "buffer_in[1]"
+                                            },
+                                            {
+                                                "name": "buffer_in[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in4",
+                                "id": 4,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 15,
+                                "portIndex": 4,
+                                "nets": [
+                                    {
+                                        "name": "data_in",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "data_in[15]"
+                                            },
+                                            {
+                                                "name": "data_in[14]"
+                                            },
+                                            {
+                                                "name": "data_in[13]"
+                                            },
+                                            {
+                                                "name": "data_in[12]"
+                                            },
+                                            {
+                                                "name": "data_in[11]"
+                                            },
+                                            {
+                                                "name": "data_in[10]"
+                                            },
+                                            {
+                                                "name": "data_in[9]"
+                                            },
+                                            {
+                                                "name": "data_in[8]"
+                                            },
+                                            {
+                                                "name": "data_in[7]"
+                                            },
+                                            {
+                                                "name": "data_in[6]"
+                                            },
+                                            {
+                                                "name": "data_in[5]"
+                                            },
+                                            {
+                                                "name": "data_in[4]"
+                                            },
+                                            {
+                                                "name": "data_in[3]"
+                                            },
+                                            {
+                                                "name": "data_in[2]"
+                                            },
+                                            {
+                                                "name": "data_in[1]"
+                                            },
+                                            {
+                                                "name": "data_in[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in5",
+                                "id": 5,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 1,
+                                "portIndex": 5,
+                                "nets": [
+                                    {
+                                        "name": "R_I",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "R_I[1]"
+                                            },
+                                            {
+                                                "name": "R_I[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in6",
+                                "id": 6,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 1,
+                                "portIndex": 6,
+                                "nets": [
+                                    {
+                                        "name": "flags",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "flags[1]"
+                                            },
+                                            {
+                                                "name": "flags[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in7",
+                                "id": 7,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 15,
+                                "portIndex": 7,
+                                "nets": [
+                                    {
+                                        "name": "a",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "a[15]"
+                                            },
+                                            {
+                                                "name": "a[14]"
+                                            },
+                                            {
+                                                "name": "a[13]"
+                                            },
+                                            {
+                                                "name": "a[12]"
+                                            },
+                                            {
+                                                "name": "a[11]"
+                                            },
+                                            {
+                                                "name": "a[10]"
+                                            },
+                                            {
+                                                "name": "a[9]"
+                                            },
+                                            {
+                                                "name": "a[8]"
+                                            },
+                                            {
+                                                "name": "a[7]"
+                                            },
+                                            {
+                                                "name": "a[6]"
+                                            },
+                                            {
+                                                "name": "a[5]"
+                                            },
+                                            {
+                                                "name": "a[4]"
+                                            },
+                                            {
+                                                "name": "a[3]"
+                                            },
+                                            {
+                                                "name": "a[2]"
+                                            },
+                                            {
+                                                "name": "a[1]"
+                                            },
+                                            {
+                                                "name": "a[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in8",
+                                "id": 8,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 15,
+                                "portIndex": 8,
+                                "nets": [
+                                    {
+                                        "name": "b",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "b[15]"
+                                            },
+                                            {
+                                                "name": "b[14]"
+                                            },
+                                            {
+                                                "name": "b[13]"
+                                            },
+                                            {
+                                                "name": "b[12]"
+                                            },
+                                            {
+                                                "name": "b[11]"
+                                            },
+                                            {
+                                                "name": "b[10]"
+                                            },
+                                            {
+                                                "name": "b[9]"
+                                            },
+                                            {
+                                                "name": "b[8]"
+                                            },
+                                            {
+                                                "name": "b[7]"
+                                            },
+                                            {
+                                                "name": "b[6]"
+                                            },
+                                            {
+                                                "name": "b[5]"
+                                            },
+                                            {
+                                                "name": "b[4]"
+                                            },
+                                            {
+                                                "name": "b[3]"
+                                            },
+                                            {
+                                                "name": "b[2]"
+                                            },
+                                            {
+                                                "name": "b[1]"
+                                            },
+                                            {
+                                                "name": "b[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in9",
+                                "id": 9,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 15,
+                                "portIndex": 9,
+                                "nets": [
+                                    {
+                                        "name": "c",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "c[15]"
+                                            },
+                                            {
+                                                "name": "c[14]"
+                                            },
+                                            {
+                                                "name": "c[13]"
+                                            },
+                                            {
+                                                "name": "c[12]"
+                                            },
+                                            {
+                                                "name": "c[11]"
+                                            },
+                                            {
+                                                "name": "c[10]"
+                                            },
+                                            {
+                                                "name": "c[9]"
+                                            },
+                                            {
+                                                "name": "c[8]"
+                                            },
+                                            {
+                                                "name": "c[7]"
+                                            },
+                                            {
+                                                "name": "c[6]"
+                                            },
+                                            {
+                                                "name": "c[5]"
+                                            },
+                                            {
+                                                "name": "c[4]"
+                                            },
+                                            {
+                                                "name": "c[3]"
+                                            },
+                                            {
+                                                "name": "c[2]"
+                                            },
+                                            {
+                                                "name": "c[1]"
+                                            },
+                                            {
+                                                "name": "c[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in10",
+                                "id": 10,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 10,
+                                "nets": [
+                                    {
+                                        "name": "PS2_clk_IBUF",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in11",
+                                "id": 11,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 11,
+                                "nets": [
+                                    {
+                                        "name": "PS2_dat_IBUF",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in12",
+                                "id": 12,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 3,
+                                "portIndex": 12,
+                                "nets": [
+                                    {
+                                        "name": "out",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "out[3]"
+                                            },
+                                            {
+                                                "name": "out[2]"
+                                            },
+                                            {
+                                                "name": "out[1]"
+                                            },
+                                            {
+                                                "name": "out[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in12",
+                                "id": 13,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 4,
+                                "rightIndex": 4,
+                                "portIndex": 12,
+                                "nets": [
+                                    {
+                                        "name": "<const0>_1",
+                                        "isBus": false,
+                                        "parentNetId": 101
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in12",
+                                "id": 14,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 5,
+                                "rightIndex": 5,
+                                "portIndex": 12,
+                                "nets": [
+                                    {
+                                        "name": "<const0>_2",
+                                        "isBus": false,
+                                        "parentNetId": 101
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in12",
+                                "id": 15,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 6,
+                                "rightIndex": 6,
+                                "portIndex": 12,
+                                "nets": [
+                                    {
+                                        "name": "<const0>_3",
+                                        "isBus": false,
+                                        "parentNetId": 101
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in12",
+                                "id": 16,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 7,
+                                "rightIndex": 7,
+                                "portIndex": 12,
+                                "nets": [
+                                    {
+                                        "name": "<const0>",
+                                        "isBus": false,
+                                        "parentNetId": 101
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "parent_nets": [
+                    {
+                        "id": 0,
+                        "name": "state[2]",
+                        "state_reg": [
+                            {
+                                "name": "state_reg[2]",
+                                "states": [
+                                    {
+                                        "name": "iSTATE",
+                                        "val": "000"
+                                    },
+                                    {
+                                        "name": "iSTATE0",
+                                        "val": "001"
+                                    },
+                                    {
+                                        "name": "iSTATE1",
+                                        "val": "010"
+                                    },
+                                    {
+                                        "name": "iSTATE2",
+                                        "val": "011"
+                                    },
+                                    {
+                                        "name": "iSTATE3",
+                                        "val": "100"
+                                    },
+                                    {
+                                        "name": "iSTATE4",
+                                        "val": "101"
+                                    },
+                                    {
+                                        "name": "iSTATE5",
+                                        "val": "110"
+                                    },
+                                    {
+                                        "name": "iSTATE6",
+                                        "val": "111"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 1,
+                        "name": "state[1]",
+                        "state_reg": [
+                            {
+                                "name": "state_reg[1]",
+                                "states": [
+                                    {
+                                        "name": "iSTATE",
+                                        "val": "000"
+                                    },
+                                    {
+                                        "name": "iSTATE0",
+                                        "val": "001"
+                                    },
+                                    {
+                                        "name": "iSTATE1",
+                                        "val": "010"
+                                    },
+                                    {
+                                        "name": "iSTATE2",
+                                        "val": "011"
+                                    },
+                                    {
+                                        "name": "iSTATE3",
+                                        "val": "100"
+                                    },
+                                    {
+                                        "name": "iSTATE4",
+                                        "val": "101"
+                                    },
+                                    {
+                                        "name": "iSTATE5",
+                                        "val": "110"
+                                    },
+                                    {
+                                        "name": "iSTATE6",
+                                        "val": "111"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "name": "state[0]",
+                        "state_reg": [
+                            {
+                                "name": "state_reg[0]",
+                                "states": [
+                                    {
+                                        "name": "iSTATE",
+                                        "val": "000"
+                                    },
+                                    {
+                                        "name": "iSTATE0",
+                                        "val": "001"
+                                    },
+                                    {
+                                        "name": "iSTATE1",
+                                        "val": "010"
+                                    },
+                                    {
+                                        "name": "iSTATE2",
+                                        "val": "011"
+                                    },
+                                    {
+                                        "name": "iSTATE3",
+                                        "val": "100"
+                                    },
+                                    {
+                                        "name": "iSTATE4",
+                                        "val": "101"
+                                    },
+                                    {
+                                        "name": "iSTATE5",
+                                        "val": "110"
+                                    },
+                                    {
+                                        "name": "iSTATE6",
+                                        "val": "111"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 4,
+                        "name": "automat/state__0[5]",
+                        "state_reg": [
+                            {
+                                "name": "automat/FSM_sequential_state_reg[5]",
+                                "states": [
+                                    {
+                                        "name": "iSTATE",
+                                        "val": "001001"
+                                    },
+                                    {
+                                        "name": "iSTATE0",
+                                        "val": "000101"
+                                    },
+                                    {
+                                        "name": "iSTATE1",
+                                        "val": "001000"
+                                    },
+                                    {
+                                        "name": "iSTATE2",
+                                        "val": "000100"
+                                    },
+                                    {
+                                        "name": "iSTATE3",
+                                        "val": "011111"
+                                    },
+                                    {
+                                        "name": "iSTATE4",
+                                        "val": "011110"
+                                    },
+                                    {
+                                        "name": "iSTATE5",
+                                        "val": "100110"
+                                    },
+                                    {
+                                        "name": "iSTATE6",
+                                        "val": "011101"
+                                    },
+                                    {
+                                        "name": "iSTATE7",
+                                        "val": "100101"
+                                    },
+                                    {
+                                        "name": "iSTATE8",
+                                        "val": "011100"
+                                    },
+                                    {
+                                        "name": "iSTATE9",
+                                        "val": "100100"
+                                    },
+                                    {
+                                        "name": "iSTATE10",
+                                        "val": "000011"
+                                    },
+                                    {
+                                        "name": "iSTATE11",
+                                        "val": "000010"
+                                    },
+                                    {
+                                        "name": "iSTATE12",
+                                        "val": "000001"
+                                    },
+                                    {
+                                        "name": "iSTATE13",
+                                        "val": "000000"
+                                    },
+                                    {
+                                        "name": "iSTATE14",
+                                        "val": "011011"
+                                    },
+                                    {
+                                        "name": "iSTATE15",
+                                        "val": "100011"
+                                    },
+                                    {
+                                        "name": "iSTATE16",
+                                        "val": "010111"
+                                    },
+                                    {
+                                        "name": "iSTATE17",
+                                        "val": "011010"
+                                    },
+                                    {
+                                        "name": "iSTATE18",
+                                        "val": "010110"
+                                    },
+                                    {
+                                        "name": "iSTATE19",
+                                        "val": "100010"
+                                    },
+                                    {
+                                        "name": "iSTATE20",
+                                        "val": "011001"
+                                    },
+                                    {
+                                        "name": "iSTATE21",
+                                        "val": "011000"
+                                    },
+                                    {
+                                        "name": "iSTATE22",
+                                        "val": "100001"
+                                    },
+                                    {
+                                        "name": "iSTATE23",
+                                        "val": "001111"
+                                    },
+                                    {
+                                        "name": "iSTATE24",
+                                        "val": "010101"
+                                    },
+                                    {
+                                        "name": "iSTATE25",
+                                        "val": "100000"
+                                    },
+                                    {
+                                        "name": "iSTATE26",
+                                        "val": "001110"
+                                    },
+                                    {
+                                        "name": "iSTATE27",
+                                        "val": "010100"
+                                    },
+                                    {
+                                        "name": "iSTATE28",
+                                        "val": "001101"
+                                    },
+                                    {
+                                        "name": "iSTATE29",
+                                        "val": "001100"
+                                    },
+                                    {
+                                        "name": "iSTATE30",
+                                        "val": "010011"
+                                    },
+                                    {
+                                        "name": "iSTATE31",
+                                        "val": "010010"
+                                    },
+                                    {
+                                        "name": "iSTATE32",
+                                        "val": "001011"
+                                    },
+                                    {
+                                        "name": "iSTATE33",
+                                        "val": "010001"
+                                    },
+                                    {
+                                        "name": "iSTATE34",
+                                        "val": "000111"
+                                    },
+                                    {
+                                        "name": "iSTATE35",
+                                        "val": "001010"
+                                    },
+                                    {
+                                        "name": "iSTATE36",
+                                        "val": "010000"
+                                    },
+                                    {
+                                        "name": "iSTATE37",
+                                        "val": "000110"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 7,
+                        "name": "automat/state__0[2]",
+                        "state_reg": [
+                            {
+                                "name": "automat/FSM_sequential_state_reg[2]",
+                                "states": [
+                                    {
+                                        "name": "iSTATE",
+                                        "val": "001001"
+                                    },
+                                    {
+                                        "name": "iSTATE0",
+                                        "val": "000101"
+                                    },
+                                    {
+                                        "name": "iSTATE1",
+                                        "val": "001000"
+                                    },
+                                    {
+                                        "name": "iSTATE2",
+                                        "val": "000100"
+                                    },
+                                    {
+                                        "name": "iSTATE3",
+                                        "val": "011111"
+                                    },
+                                    {
+                                        "name": "iSTATE4",
+                                        "val": "011110"
+                                    },
+                                    {
+                                        "name": "iSTATE5",
+                                        "val": "100110"
+                                    },
+                                    {
+                                        "name": "iSTATE6",
+                                        "val": "011101"
+                                    },
+                                    {
+                                        "name": "iSTATE7",
+                                        "val": "100101"
+                                    },
+                                    {
+                                        "name": "iSTATE8",
+                                        "val": "011100"
+                                    },
+                                    {
+                                        "name": "iSTATE9",
+                                        "val": "100100"
+                                    },
+                                    {
+                                        "name": "iSTATE10",
+                                        "val": "000011"
+                                    },
+                                    {
+                                        "name": "iSTATE11",
+                                        "val": "000010"
+                                    },
+                                    {
+                                        "name": "iSTATE12",
+                                        "val": "000001"
+                                    },
+                                    {
+                                        "name": "iSTATE13",
+                                        "val": "000000"
+                                    },
+                                    {
+                                        "name": "iSTATE14",
+                                        "val": "011011"
+                                    },
+                                    {
+                                        "name": "iSTATE15",
+                                        "val": "100011"
+                                    },
+                                    {
+                                        "name": "iSTATE16",
+                                        "val": "010111"
+                                    },
+                                    {
+                                        "name": "iSTATE17",
+                                        "val": "011010"
+                                    },
+                                    {
+                                        "name": "iSTATE18",
+                                        "val": "010110"
+                                    },
+                                    {
+                                        "name": "iSTATE19",
+                                        "val": "100010"
+                                    },
+                                    {
+                                        "name": "iSTATE20",
+                                        "val": "011001"
+                                    },
+                                    {
+                                        "name": "iSTATE21",
+                                        "val": "011000"
+                                    },
+                                    {
+                                        "name": "iSTATE22",
+                                        "val": "100001"
+                                    },
+                                    {
+                                        "name": "iSTATE23",
+                                        "val": "001111"
+                                    },
+                                    {
+                                        "name": "iSTATE24",
+                                        "val": "010101"
+                                    },
+                                    {
+                                        "name": "iSTATE25",
+                                        "val": "100000"
+                                    },
+                                    {
+                                        "name": "iSTATE26",
+                                        "val": "001110"
+                                    },
+                                    {
+                                        "name": "iSTATE27",
+                                        "val": "010100"
+                                    },
+                                    {
+                                        "name": "iSTATE28",
+                                        "val": "001101"
+                                    },
+                                    {
+                                        "name": "iSTATE29",
+                                        "val": "001100"
+                                    },
+                                    {
+                                        "name": "iSTATE30",
+                                        "val": "010011"
+                                    },
+                                    {
+                                        "name": "iSTATE31",
+                                        "val": "010010"
+                                    },
+                                    {
+                                        "name": "iSTATE32",
+                                        "val": "001011"
+                                    },
+                                    {
+                                        "name": "iSTATE33",
+                                        "val": "010001"
+                                    },
+                                    {
+                                        "name": "iSTATE34",
+                                        "val": "000111"
+                                    },
+                                    {
+                                        "name": "iSTATE35",
+                                        "val": "001010"
+                                    },
+                                    {
+                                        "name": "iSTATE36",
+                                        "val": "010000"
+                                    },
+                                    {
+                                        "name": "iSTATE37",
+                                        "val": "000110"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 8,
+                        "name": "automat/state__0[1]",
+                        "state_reg": [
+                            {
+                                "name": "automat/FSM_sequential_state_reg[1]",
+                                "states": [
+                                    {
+                                        "name": "iSTATE",
+                                        "val": "001001"
+                                    },
+                                    {
+                                        "name": "iSTATE0",
+                                        "val": "000101"
+                                    },
+                                    {
+                                        "name": "iSTATE1",
+                                        "val": "001000"
+                                    },
+                                    {
+                                        "name": "iSTATE2",
+                                        "val": "000100"
+                                    },
+                                    {
+                                        "name": "iSTATE3",
+                                        "val": "011111"
+                                    },
+                                    {
+                                        "name": "iSTATE4",
+                                        "val": "011110"
+                                    },
+                                    {
+                                        "name": "iSTATE5",
+                                        "val": "100110"
+                                    },
+                                    {
+                                        "name": "iSTATE6",
+                                        "val": "011101"
+                                    },
+                                    {
+                                        "name": "iSTATE7",
+                                        "val": "100101"
+                                    },
+                                    {
+                                        "name": "iSTATE8",
+                                        "val": "011100"
+                                    },
+                                    {
+                                        "name": "iSTATE9",
+                                        "val": "100100"
+                                    },
+                                    {
+                                        "name": "iSTATE10",
+                                        "val": "000011"
+                                    },
+                                    {
+                                        "name": "iSTATE11",
+                                        "val": "000010"
+                                    },
+                                    {
+                                        "name": "iSTATE12",
+                                        "val": "000001"
+                                    },
+                                    {
+                                        "name": "iSTATE13",
+                                        "val": "000000"
+                                    },
+                                    {
+                                        "name": "iSTATE14",
+                                        "val": "011011"
+                                    },
+                                    {
+                                        "name": "iSTATE15",
+                                        "val": "100011"
+                                    },
+                                    {
+                                        "name": "iSTATE16",
+                                        "val": "010111"
+                                    },
+                                    {
+                                        "name": "iSTATE17",
+                                        "val": "011010"
+                                    },
+                                    {
+                                        "name": "iSTATE18",
+                                        "val": "010110"
+                                    },
+                                    {
+                                        "name": "iSTATE19",
+                                        "val": "100010"
+                                    },
+                                    {
+                                        "name": "iSTATE20",
+                                        "val": "011001"
+                                    },
+                                    {
+                                        "name": "iSTATE21",
+                                        "val": "011000"
+                                    },
+                                    {
+                                        "name": "iSTATE22",
+                                        "val": "100001"
+                                    },
+                                    {
+                                        "name": "iSTATE23",
+                                        "val": "001111"
+                                    },
+                                    {
+                                        "name": "iSTATE24",
+                                        "val": "010101"
+                                    },
+                                    {
+                                        "name": "iSTATE25",
+                                        "val": "100000"
+                                    },
+                                    {
+                                        "name": "iSTATE26",
+                                        "val": "001110"
+                                    },
+                                    {
+                                        "name": "iSTATE27",
+                                        "val": "010100"
+                                    },
+                                    {
+                                        "name": "iSTATE28",
+                                        "val": "001101"
+                                    },
+                                    {
+                                        "name": "iSTATE29",
+                                        "val": "001100"
+                                    },
+                                    {
+                                        "name": "iSTATE30",
+                                        "val": "010011"
+                                    },
+                                    {
+                                        "name": "iSTATE31",
+                                        "val": "010010"
+                                    },
+                                    {
+                                        "name": "iSTATE32",
+                                        "val": "001011"
+                                    },
+                                    {
+                                        "name": "iSTATE33",
+                                        "val": "010001"
+                                    },
+                                    {
+                                        "name": "iSTATE34",
+                                        "val": "000111"
+                                    },
+                                    {
+                                        "name": "iSTATE35",
+                                        "val": "001010"
+                                    },
+                                    {
+                                        "name": "iSTATE36",
+                                        "val": "010000"
+                                    },
+                                    {
+                                        "name": "iSTATE37",
+                                        "val": "000110"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 101,
+                        "name": "<const0>",
+                        "const_load": "GND",
+                        "state_reg": [
+                            {
+                                "name": "state_reg[0]",
+                                "states": [
+                                    {
+                                        "name": "iSTATE",
+                                        "val": "000"
+                                    },
+                                    {
+                                        "name": "iSTATE0",
+                                        "val": "001"
+                                    },
+                                    {
+                                        "name": "iSTATE1",
+                                        "val": "010"
+                                    },
+                                    {
+                                        "name": "iSTATE2",
+                                        "val": "011"
+                                    },
+                                    {
+                                        "name": "iSTATE3",
+                                        "val": "100"
+                                    },
+                                    {
+                                        "name": "iSTATE4",
+                                        "val": "101"
+                                    },
+                                    {
+                                        "name": "iSTATE5",
+                                        "val": "110"
+                                    },
+                                    {
+                                        "name": "iSTATE6",
+                                        "val": "111"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
