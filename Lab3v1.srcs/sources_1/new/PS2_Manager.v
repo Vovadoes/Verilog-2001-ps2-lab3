@@ -9,15 +9,12 @@ module PS2_Manager (
     output [3:0] out,
     output [1:0] flags
 );
-// Состояние ожидания установки сигнала готовности пакета данных
+
 parameter WAIT_ONE = 0;
-// Состояние ожидания сброса сигнала готовности пакета данных
 parameter WAIT_ZERO = 1;
 reg state;
-// Выходы модуля приёма одного пакета PS2
 wire PS2_R_O, PS2_ERROR; 
 wire [7:0] PS2_out;
-// Регистр флага отжатия клавиши
 reg release_flag;
 
 initial begin
@@ -49,13 +46,13 @@ begin
         end       
    endcase  
 end
-// Приём одного пакета
+
 PS2 ps2(
     .clk(clk),
     .PS2_clk(PS2_clk), .PS2_dat(PS2_dat),
     .out(PS2_out), .R_O(PS2_R_O),
     .ERROR(PS2_ERROR)
 );
-// Дешифратор пакета
+
 PS2_DC dc(.keycode(PS2_out), .out(out), .flags(flags));
 endmodule

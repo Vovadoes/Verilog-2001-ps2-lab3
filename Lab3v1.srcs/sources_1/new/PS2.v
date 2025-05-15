@@ -41,12 +41,10 @@ begin
 end
 
 
-// Блок управления буфером для записи пакета    
 always@(negedge PS2_clk_sync[1])
 begin
     case(state)
         
-        // Ожидание стартового бита
         WAIT_START_BIT:
         begin
             R_O <= 0; 
@@ -54,7 +52,6 @@ begin
             state <= ~PS2_dat_sync[1] ? WRITE : IDLE;
         end
         
-        // Ожидание конца пакета
         IDLE:
             if (cnt == 4'd10)
             begin
@@ -63,14 +60,12 @@ begin
                 state <= WAIT_START_BIT;         
             end
 
-        // Обработка битов данных
         WRITE: begin
             if (cnt == 4'd8)
                 state <= PARITY_BIT;
             PS2_buf <= {PS2_dat_sync[1], PS2_buf[7:1]};
         end
         
-        // Обработка бита чётности 
         PARITY_BIT: begin  
             if ((~^PS2_buf) == PS2_dat_sync[1])
                 state <= STOP_BIT;
@@ -78,7 +73,6 @@ begin
                 state <= IDLE; 
         end
         
-        // Обработка стоп-бита   
         STOP_BIT: begin
             if (!PS2_dat_sync[1])
                 ERROR <= 1;  

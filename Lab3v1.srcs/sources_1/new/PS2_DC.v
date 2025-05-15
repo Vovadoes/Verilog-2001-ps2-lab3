@@ -35,7 +35,6 @@ end
 always@(keycode)
 begin  
      case(keycode)
-            // ײטפנû
             NUMBERS[0] : out = 4'h0; 
             NUMBERS[1] : out = 4'h1; 
             NUMBERS[2] : out = 4'h2;
@@ -53,7 +52,6 @@ begin
             NUMBERS[14]: out = 4'hE; 
             NUMBERS[15]: out = 4'hF;
             
-            // Êכאגטרא "Enter"
             ENTER_CODE: out = 0;
             
             default: out = 0;
