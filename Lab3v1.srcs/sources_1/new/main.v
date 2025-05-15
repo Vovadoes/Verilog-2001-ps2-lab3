@@ -51,7 +51,7 @@ wire R_O;
 wire PS2_R_O;
 reg [6:0] cnt;
 reg [2:0] state;// new_state;
-wire [7:0] out;
+wire [3:0] out;
 wire [1:0] flags;
 reg [15:0] buffer_in = 0;
 
