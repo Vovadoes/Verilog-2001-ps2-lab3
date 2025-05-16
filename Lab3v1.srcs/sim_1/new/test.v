@@ -40,25 +40,45 @@ begin
     @(posedge clk);
     @(posedge clk);  
 
-    #(2*clk_period) key_code = HEX_CD(1);
+    #(2*clk_period) key_code = HEX_CD(4'h2);
     PS2_press_and_release_key(key_code);
-    #(2*clk_period) key_code = HEX_CD(4'hF);
+    #(2*clk_period) key_code = HEX_CD(4'hA);
     PS2_press_and_release_key(key_code);
-    #(2*clk_period) key_code = ENTER_CODE;
+    #(2*clk_period) key_code = HEX_CD(4'h6);
     PS2_press_and_release_key(key_code);
-    
-    #(2*clk_period) key_code = HEX_CD(1);
-    PS2_press_and_release_key(key_code);
-    #(2*clk_period) key_code = HEX_CD(4'hF);
+    #(2*clk_period) key_code = HEX_CD(4'h6);
     PS2_press_and_release_key(key_code);
     #(2*clk_period) key_code = ENTER_CODE;
     PS2_press_and_release_key(key_code);
     
-    #(2*clk_period)
+    #(2*clk_period) key_code = HEX_CD(4'hC);
+    PS2_press_and_release_key(key_code);
+    #(2*clk_period) key_code = HEX_CD(4'h0);
+    PS2_press_and_release_key(key_code);
+    #(2*clk_period) key_code = HEX_CD(4'h0);
+    PS2_press_and_release_key(key_code);
+    #(2*clk_period) key_code = HEX_CD(4'h0);
+    PS2_press_and_release_key(key_code);
+    #(2*clk_period) key_code = ENTER_CODE;
+    PS2_press_and_release_key(key_code);
+    
+    #(2*clk_period) key_code = HEX_CD(4'hC);
+    PS2_press_and_release_key(key_code);
+    #(2*clk_period) key_code = HEX_CD(4'h0);
+    PS2_press_and_release_key(key_code);
+    #(2*clk_period) key_code = HEX_CD(4'h0);
+    PS2_press_and_release_key(key_code);
+    #(2*clk_period) key_code = HEX_CD(4'h0);
+    PS2_press_and_release_key(key_code);
+    #(2*clk_period) key_code = ENTER_CODE;
+    PS2_press_and_release_key(key_code);
+    
+    wait(uut.state == 7);
+    #(100*clk_period)
     $finish;
 end
 
-// Нажатие и отжатие клавиши
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 task automatic PS2_press_and_release_key(
     input [7:0] code
 );
@@ -80,7 +100,7 @@ task automatic PS2_press_and_release_key(
     end
 endtask
 
-// Генерация пакета данных
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 task automatic PS2_code_input(
     input [7:0] code
 );
@@ -99,7 +119,7 @@ task automatic PS2_code_input(
     end
 endtask
 
-// Генерация синхросигнала для передачи пакета
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 task automatic PS2_gen_byte_clk;
     begin
         #(clk_period);
